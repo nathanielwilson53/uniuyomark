@@ -1,0 +1,138 @@
+.body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.profile {
+  box-shadow: 0 0 8px 20px rgba(115, 115, 115, 0.2);
+  border-radius: 100%;
+  border: 10px;
+  height: 200px;
+}
+.foot{
+  border-radius: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #e9b1ff;
+  border: 20px solid #691a70;
+  padding: 10px;
+  background-color: #1e0736;
+  margin: 0%;
+}
+
+.head{
+  text-align: center;
+
+}
+
+h1 {
+  border-radius: 100px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 100px;
+  color: #ffffff;
+  text-align: center;
+  border: 20px solid #000000;
+  background-color: #1e0736;
+
+}
+.body{
+  border-radius: 50px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e0736;
+}
+.slides{
+  position: relative;
+  width: 1000px;
+  height: 650px;
+  
+  border: 10px solid #000000;
+  box-shadow: 0 0 8px 5px rgba(0, 0, 0, 0.2);
+}
+.slides .slide{
+  width: 100%;
+  height: calc(100% - 0px);
+  position: relative;
+  overflow: hidden;
+}
+.slides .slide img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+.slides .slide img:not(.active){
+  top: 0;
+  left: -100%;
+}
+span.next, span.prev{
+
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 14px;
+  color: #eee;
+  background-color: #02010b;
+  font-size: 24px;
+  font-weight: bold;
+  transition: 0.5s;
+  border-radius: 3px;
+  user-select: none;
+  cursor: pointer;
+  z-index: 1;
+}
+span.next{
+  right: 20px;
+}
+
+span.prev{
+  left: 20px;
+}
+span.next:hover, span.prev:hover{
+  background-color: #ede6d6;
+  opacity: 0.8;
+  color: #222;
+}
+
+@keyframes next1 {
+  from{
+    left: 0%;
+
+  }
+  to{
+    left: -100%;
+  }
+}
+@keyframes next2 {
+  from{
+    left: 100%;
+
+  }
+  to{
+    left: 0%;
+  }
+}
+
+@keyframes prev1 {
+  from{
+    left: 0%;
+
+  }
+  to{
+    left: 100%;
+  }
+}
+@keyframes prev2 {
+  from{
+    left: -100%;
+
+  }
+  to{
+    left: 0%;
+  }
+}
